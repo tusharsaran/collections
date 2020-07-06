@@ -15,6 +15,20 @@ import com.java.collections.model.Employee;
 
 /**
  * @author tusharsaran
+ * Features :
+ * 		- order
+ * 		- allow duplicates
+ * 		- allows the null element
+ * 		- non - synchronized
+ * 		- good for searching
+ * 		- How it works internally
+ * 				-  create an array of Objects []  -->  private static final Object[] EMPTY_ELEMENTDATA = {};
+ * 				- initially creates an array with the size of 10 and when the size is full it increases the capacity 
+ * 				-  transient keyword   -->  transient Object[] elementData
+ * 											The capacity of the ArrayList is the length of this array buffer. Any
+     										 empty ArrayList with elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA
+     										 will be expanded to DEFAULT_CAPACITY when the first element is added
+ *
  *
  */
 public class Arraylist<E> {
@@ -204,7 +218,9 @@ public class Arraylist<E> {
 				emp1.setEmpname("Suruchi");
 				emp1.setAge(32);
 				empList.add(emp1);
+				empList.add(null);
 				for(Employee empDetails : empList) {
+					if(empDetails != null)
 					System.out.printf("Employee name is : %s \nEmployee age is : %d \n", empDetails.getEmpname(), empDetails.getAge());
 				}
 				
