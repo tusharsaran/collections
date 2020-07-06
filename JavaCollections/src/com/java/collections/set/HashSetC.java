@@ -13,9 +13,16 @@ import java.util.TreeSet;
 import com.java.collections.model.Employee;
 
 /**
- * @author tusharsaran Features : - no order - no duplicates - allows the null
- *         element - sorted in asc order - non - synchronized - iterator
- *         returned by this class is fail-fast which means iterator would throw
+ * @author tusharsaran 
+ * Features : 
+ * 		- no order (only sort integer as it internally user Hashmap and hashmap stores its elements in hashtable and uses hashing 
+ * 					therefore hashing will generate an int number.
+ * 		- no duplicates 
+ * 		- allows the null element 
+ * 		- non - synchronized 
+ * 		- Hashset provide better performance (faster) than TreeSet for the operations like add, remove, contains, size etc. 
+ * 		  HashSet offers constant time cost while TreeSet offers log(n) time cost for such operations.
+ * 		- iterator returned by this class is fail-fast which means iterator would throw
  *         ConcurrentModificationException if HashSet has been modified after
  *         creation of iterator, by any means except iterator’s own remove
  *         method.
@@ -53,19 +60,27 @@ public class HashSetC {
 
 		Set<Integer> setInt = new HashSet<>();
 		setInt.add(2);
-		setInt.add(1);
 		setInt.add(94);
 		setInt.add(3);
 		setInt.add(2);
 		setInt.add(null);
 		setInt.add(1);
-		// setInt.add(null);
+		setInt.add(null);
 		setInt.add(null);
 		setInt.add(null);
 
+		System.out.println(setInt);
 		for (Integer num : setInt) {
 			System.out.printf("Numbers are : %d \n", num);
 		}
+		
+		Set<String> hSet = new HashSet<String>();
+			hSet.add("Apple");
+			hSet.add("Mango");
+			hSet.add("Orange");
+			hSet.add("grapes");
+			hSet.add("Banana");
+			System.out.println(hSet);
 
 		Iterator<Employee> itr = setE.iterator();
 		while (itr.hasNext()) {
@@ -105,12 +120,22 @@ public class HashSetC {
 		
 		
 		Set<Integer> treeSet =  new TreeSet<>();
-		treeSet.addAll(setInt);
+		//treeSet.addAll(setInt);  throw NPE as Treeset does not allow null values
 
+		//therefore adding another hashset
+		Set<Integer> setAnotherInt = new HashSet<>();
+		setAnotherInt.add(2);
+		setAnotherInt.add(1);
+		setAnotherInt.add(94);
+		setAnotherInt.add(3);
+		setAnotherInt.add(2);
+		setAnotherInt.add(1);
+		treeSet.addAll(setAnotherInt);
+		
 		System.out.printf("Testing treeSet :::::::::::::::::::::::\n");
-		//for (Integer treeSetNum : treeSet) {
-		//	System.out.printf("array  list element value is ::::::::::::::::::::::: %d\n", treeSetNum);
-		//	}
+		for (Integer treeSetNum : treeSet) {
+			System.out.printf("array  list element value is ::::::::::::::::::::::: %d\n", treeSetNum);
+		}
 		
 		
 		setE.clear();
