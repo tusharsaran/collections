@@ -2,8 +2,8 @@
           
       In simple terms if we are talking in terms of numbers or group we need something to store. let say 
       if we want to store a single number we can use either long, int, short or if we want to store a single 
-      name we can use String but what if we want to store mulitple or group of name of numbers then what do we use 
-      to store it. 
+      name we can use String but what if we want to store mulitple or group of name of numbers then what do we 
+      use to store it. 
  
       Java has provided something called `Collections` or `Collections Framework` which helps in storing and 
       processing the data efficiently. It has multiple classes and interfaces for storing data. 
@@ -12,8 +12,8 @@
       funtionality that will be helpful for a particular use case. For example I need to store a list of numbers
       and want to maintain the order in terms of how i am storing I should retrieve in same manner and also we can 
       include null and duplicate numbers. In that case Arraylist, Linkedlist or Vector is helpful.Similarly each 
-      class or interface has it unique functionality and based on that we can store the data in those classes based 
-      on the requirement.
+      class or interface has it unique functionality and based on that we can store the data in those classes 
+      based on the requirement.
       
       
 
@@ -145,8 +145,8 @@
 <br> <br>
 <h2> Comparable vs Comparator </h2>
 
-	Java provides some inbuilt methods to sort primitive types array or Wrapper classes array or list.Both comparable and comparator interfaces are used for   
-	sorting.
+	Java provides some inbuilt methods to sort primitive types array or Wrapper classes array or list.Both comparable 
+	and comparator interfaces are used for sorting.
 	
 	Lets say we have an Employee class that has follwoing elements:
 	- name
@@ -160,8 +160,8 @@
 	1. Comparable :
 		
 		- Model (employee)  will implement Comparable interface
-		- overide compareTo(T obj) method in the model class to compare current object with the passing object.Comparable affects the original 
-		   class, i.e., the actual class is modified.
+		- overide compareTo(T obj) method in the model class to compare current object with the passing object.Comparable 
+		  affects the original class, i.e., the actual class is modified.
 		- Comparable is present in java.lang package.
 		- one of the disavantage of using comparable is we can only do a sorting on a single element.
 		- once comparable is implemented by the model class you can sort by calling Collections.sort(list) method.
@@ -197,7 +197,8 @@
 			- one of the advatage of using comparator is that you can create sorting based on multiple elements.
 			- use compare(T obj, T obj1) method. Does not affect the model class
 			- part of java.util package
-			- once comparable is implemented by the model class you can sort by calling Collections.sort(list, comparator) method.
+			- once comparable is implemented by the model class you can sort by calling Collections.sort(list, 
+			 comparator) method.
 		
 		
 		e.g. 1 : within the service implementation or in the main method
