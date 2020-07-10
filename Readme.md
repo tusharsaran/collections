@@ -53,6 +53,7 @@
           - contain duplicate elements
           - contain null value
           - is non synchronized
+	  - good for search, traversal
           
           
           HOW ARRAY LIST WORKS INTERNALLY </b>
@@ -106,3 +107,18 @@
                           Collections.sort(arrayList, cmp);   -- will sort based on emp age.
               
               
+	VECTOR:
+		- same like Array list only difference is it is synchronized or thread safe thats why is bit slow
+		- maintain insertion order
+		- allow null elements
+		- allow duplicate elements
+		- is synchronized
+		- slow compared to other list clases
+	
+	 HOW ARRAY LIST WORKS INTERNALLY </b>
+	 	
+		similar to array list just that the functions are synchronized
+	
+	IMPORTANT FUNCTIONS OF VECTOR 
+		same what arraylist has..
+		
