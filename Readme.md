@@ -160,7 +160,7 @@
 	1. Comparable :
 		
 		- Model (employee)  will implement Comparable interface
-		- overide compareTo(T obj) method in the model class to compare current object with passing object.Comparable 
+		- overide compareTo(T obj) method in model class to compare current object with passing object.Comparable 
 		  affects the original class, i.e., the actual class is modified.
 		- Comparable is present in java.lang package.
 		- one of the disavantage of using comparable is we can only do a sorting on a single element.
@@ -194,11 +194,11 @@
 		
 		Comparator: 
 			
-			- one of the advatage of using comparator is that you can create sorting based on multiple elements.
+			- one of the advatage is that you can create sorting based on multiple elements.
 			- use compare(T obj, T obj1) method. Does not affect the model class
 			- part of java.util package
-			- once comparable is implemented by the model class you can sort by calling Collections.sort(list, 
-			 comparator) method.
+			- once comparable is implemented by the model class you can sort by calling 
+			  Collections.sort(list,comparator) method.
 		
 		
 		e.g. 1 : within the service implementation or in the main method
