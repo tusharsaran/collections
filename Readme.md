@@ -95,8 +95,8 @@
             - lastIndexOf(element)  - will check the element in the list and return the index of the element fat last 
 	      place.
             - contains(element) - check if the element is part of list.
-            - sublist(start index, end index) - create a sublist or small arraylist from arraylist based on the start and 
-	      end index
+            - sublist(start index, end index) - create a sublist or small arraylist from arraylist based on the start 
+	      and end index
             - Arrays.asList(array) - converting from array to arraylist
             - sorting
               - using Collections class
@@ -160,7 +160,7 @@
 	1. Comparable :
 		
 		- Model (employee)  will implement Comparable interface
-		- overide compareTo(T obj) method in the model class to compare current object with the passing object.Comparable 
+		- overide compareTo(T obj) method in the model class to compare current object with passing object.Comparable 
 		  affects the original class, i.e., the actual class is modified.
 		- Comparable is present in java.lang package.
 		- one of the disavantage of using comparable is we can only do a sorting on a single element.
