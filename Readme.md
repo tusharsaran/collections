@@ -100,8 +100,8 @@
 		                          return this.age -  o.age;
 	                          }
               - using comparator interface
-                      :->  we can add comparator method outside Model or object class, each comparator can refer to different 
-		      data like  for employee one sorting based on age, one sorting based on name etc.
+                      :->  we can add comparator method outside Model or object class, each comparator can refer to 
+		      different data like  for employee one sorting based on age, one sorting based on name etc.
                         
                             Comparator cmp  = new Comparator(){
                             
