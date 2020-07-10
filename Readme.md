@@ -39,6 +39,19 @@
                 
             - Queue(I)
               - PriorityQueue(C)
+
+<br>
+<h3> Functionalities on which Collections are distributed </h3>
+
+- Data Order
+- Is Duplicate Records Allowed
+- Is Null Values Allowed
+- Synchronization
+- Key/Value Pair
+- Sorting
+
+
+
               
  <br><br>
  
@@ -52,8 +65,7 @@
         ARRAYLIST
           
           - ordered collection, maintain the insertion order that means if we insert numbers like 23, 54, 22 will 
-	  get in the same order while retriving i.e. 23, 54, 22.
-	  
+	    	get in the same order while retriving i.e. 23, 54, 22.
           - contain duplicate elements
           - contain null value
           - is non synchronized
@@ -64,7 +76,7 @@
            -  It uses array of Objects
            -  whenever we create an object of array an array is created with the default size of 10
            - in the case the array is full it will create a new array with the double capacity and push the elements 
-	   in the new array
+	     	 in the new array
            - elements are transient that means they are non serialized - transient Object[] elementData
           
           
