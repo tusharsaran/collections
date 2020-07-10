@@ -53,7 +53,7 @@
           - contain duplicate elements
           - contain null value
           - is non synchronized
-	  - good for search, traversal
+	      - good for search and traversal
           
           
           HOW ARRAY LIST WORKS INTERNALLY </b>
@@ -115,10 +115,10 @@
 		- is synchronized
 		- slow compared to other list clases
 	
-	 HOW ARRAY LIST WORKS INTERNALLY </b>
+	 	HOW ARRAY LIST WORKS INTERNALLY </b>
 	 	
-		similar to array list just that the functions are synchronized
+			similar to array list just that the functions are synchronized
 	
-	IMPORTANT FUNCTIONS OF VECTOR 
-		same what arraylist has..
+		IMPORTANT FUNCTIONS OF VECTOR 
+			same what arraylist has..
 		
