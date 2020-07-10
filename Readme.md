@@ -141,3 +141,92 @@
 		IMPORTANT FUNCTIONS OF VECTOR 
 			same what arraylist has..
 		
+
+<br> <br>
+<h2> Comparable vs Comparator </h2>
+
+	Java provides some inbuilt methods to sort primitive types array or Wrapper classes array or list.Both comparable and comparator interfaces are used for   
+	sorting.
+	
+	Lets say we have an Employee class that has follwoing elements:
+	- name
+	- age
+	- salary
+	
+	Now lets see how we can sort using both the interface and also see the advantage:
+	
+	We have to sort the employee based on age.
+	
+	1. Comparable :
+		
+		- Model (employee)  will implement Comparable interface
+		- overide compareTo(T obj) method in the model class to compare current object with the passing object.Comparable affects the original 
+		   class, i.e., the actual class is modified.
+		- Comparable is present in java.lang package.
+		- one of the disavantage of using comparable is we can only do a sorting on a single element.
+		- once comparable is implemented by the model class you can sort by calling Collections.sort(list) method.
+		
+		e.g. 
+			
+			public class Employee implements Comparable<Employee>
+			
+			public String name;
+			public int age;
+			public int salary;
+			
+			//returns 
+				//1 if this.age is greater than e.age
+				// 0 both are equal
+				// -1 if e.age is greater than this.age
+			@Override
+			public int compareTo(employee e){
+				return this.age  - e.age;
+			}
+		
+		Once it is implemented now you can sort by calling:
+		
+		Collections.sort(arraylist);  //it will sort based on the comparable interface 
+		
+		
+		
+		
+		
+		
+		Comparator: 
+			
+			- one of the advatage of using comparator is that you can create sorting based on multiple elements.
+			- use compare(T obj, T obj1) method. Does not affect the model class
+			- part of java.util package
+			- once comparable is implemented by the model class you can sort by calling Collections.sort(list, comparator) method.
+		
+		
+		e.g. 1 : within the service implementation or in the main method
+		
+		
+		Comparator ageSorting  = new Comparator(){
+			
+			@Override
+			public int compare(Employee e1, Employee e2){
+				return e1.age.compare(e2.age);
+			}
+		};
+		
+		Collections.sort(lst, ageSorting);
+		
+		
+		
+		
+		e.g.2 : By creating  separate class
+		
+		public class SalaryComparator implements Comparator<Employee>{
+		
+			@Override
+			public int compare(Employee e1, Employee e2){
+				return e1.salary.compare(e2.salary);
+			}
+		}
+		
+		now in the service or main class :
+		
+		Collections.sort(lst, SalaryComparator);
+		
