@@ -167,11 +167,71 @@
 	    except iterator’s own remove method.
 	
 	
-	 HOW SET WORKS INTERNALLY
+	 HOW HASHSET WORKS INTERNALLY
 	 	- stores all the elements in hash table.
 		
 	
-	 IMPORTANT FUNCTIONS IN SET
+	 IMPORTANT FUNCTIONS IN HASHSET
+	 	- add(Element e) 
+		- addAll(Collection c)
+		- size()
+		- remove(object obj)
+		- removeAll(Collection c)
+		- contains(Element e)
+		- containsAll(Collection c)
+		- clear()
+		- isEmpty()
+		- toArray()
+	
+	
+	
+	LINKEDHASHSET
+	
+	  - `no duplicate elements`
+	  - `maintains order based on insertion`
+	  -  allow null elements
+	  -  non synchronized
+	  -  not sorted
+ 	  - iterator returned by this class is fail-fast which means iterator would throw
+	    ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means 
+	    except iterator’s own remove method.
+	
+	
+	 HOW LINKEDHASHSET WORKS INTERNALLY
+	 	- stores all the elements in hash table.
+		
+	
+	 IMPORTANT FUNCTIONS IN HASHSET
+	 	- add(Element e) 
+		- addAll(Collection c)
+		- size()
+		- remove(object obj)
+		- removeAll(Collection c)
+		- contains(Element e)
+		- containsAll(Collection c)
+		- clear()
+		- isEmpty()
+		- toArray()
+	
+	
+	TREESET
+	
+	  - `no duplicate elements`
+	  -  maintains no order
+	  -  does not allow null elements as it uses compareTo() or compare method and when you compare anything 
+	     with null it will throw Null Pointer exception
+	  -  non synchronized
+	  - `sorted in asc order`
+ 	  - iterator returned by this class is fail-fast which means iterator would throw
+	    ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means 
+	    except iterator’s own remove method.
+	
+	
+	 HOW TREESET WORKS INTERNALLY
+	 	- stores all the elements in hash table.
+		
+	
+	 IMPORTANT FUNCTIONS IN TREESET
 	 	- add(Element e) 
 		- addAll(Collection c)
 		- size()
