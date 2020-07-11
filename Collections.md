@@ -1,4 +1,4 @@
-<b>Note:</b> Click Readme.md for better reading
+<b>Note:</b> Click Collections.md for better reading
 
 <h2>Collections : </h2>
           
