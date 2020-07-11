@@ -80,7 +80,18 @@ public class HashSetC {
 			hSet.add("Orange");
 			hSet.add("grapes");
 			hSet.add("Banana");
+			hSet.add(null);
+			hSet.add("Bdanana");
+			hSet.add("Mangoes");
+			
 			System.out.println(hSet);
+			
+			Integer [] array = new Integer[10];
+			setInt.toArray(array);
+			System.out.println(array[3]);
+			
+			Object[] objArray =  hSet.toArray();
+			System.out.println(objArray[2]);
 
 		Iterator<Employee> itr = setE.iterator();
 		while (itr.hasNext()) {
