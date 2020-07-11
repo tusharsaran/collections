@@ -72,7 +72,7 @@
 	      - good for search and traversal
           
           
-          HOW ARRAY LIST WORKS INTERNALLY </b>
+          HOW ARRAY LIST WORKS INTERNALLY
            -  It uses array of Objects
            -  whenever we create an object of array an array is created with the default size of 10
            - in the case the array is full it will create a new array with the double capacity and push the elements 
@@ -134,13 +134,57 @@
 		- is synchronized
 		- slow compared to other list clases
 	
-	 	HOW ARRAY LIST WORKS INTERNALLY </b>
+	 	HOW ARRAY LIST WORKS INTERNALLY
 	 	
 			similar to array list just that the functions are synchronized
 	
 		IMPORTANT FUNCTIONS OF VECTOR 
 			same what arraylist has..
+
+
+<br> <br>
+<h3> SET </h3>
+	
+	- does not allow duplicate elements
+	
+	
+	
+	HASHSET
+	
+	  - `no duplicate elements`
+	  - maintains no order
+	  - stores the elements in hashtables and is best out of other set class as per performance
+	  - allow null elements
+	  - non synchronized
+	  - not sorted
+	  - Hashset provide better performance (faster) than TreeSet for the operations like add, remove, 
+	    contains, size etc
+	    HashSet offers constant time cost while TreeSet offers log(n) time cost for such operations.
+ 	  - iterator returned by this class is fail-fast which means iterator would throw
+	    ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means 
+	    except iterator’s own remove method.
+	
+	
+	 HOW SET WORKS INTERNALLY
+	 	- stores all the elements in hash table.
 		
+	
+	 IMPORTANT FUNCTIONS IN SET
+	 	- add(Element e) 
+		- addAll(Collection c)
+		- size()
+		- remove(object obj)
+		- removeAll(Collection c)
+		- contains(Element e)
+		- containsAll(Collection c)
+		- clear()
+		- isEmpty()
+		- toArray()
+	
+	- one of the class of set only implements the order of insertion.
+	
+	
+	
 
 <br> <br>
 <h2> Comparable vs Comparator </h2>
