@@ -95,7 +95,7 @@
             - get(index) - retrieving element at a particular index
             - indexOf(element)  - will check the element in the list and return the index of the element found first.
             - lastIndexOf(element)  - will check the element in the list and return the index of the element fat last 
-	      place.
+	         place.
             - contains(element) - check if the element is part of list.
             - sublist(start index, end index) - create a sublist or small arraylist from arraylist based on the start 
 	      and end index
@@ -361,10 +361,32 @@
 	
 	
 	
+	
+	LINKEDHASHMAP:
+	
+		- is same like hashmap the only difference is it maintains insertion order
+		- key/value pair
+		- not sorted
+		- not synchronized
+		- contain duplicate elements in values but not in kes
+		- allow null values in key and values
+	
+	Methods are same what are there in HashMap.
+	
+	
+	
+	
 	TREEMAP
 	
+		- key/value pair
+		- sorted 
+		- does not allow null values 
+		- not synchronized
+		- maintain no order
+		- allow duplicate elements
 	
-	LINKEDHASHMAP
+	
+	
 		- maintaint the insertion order 
 
 
