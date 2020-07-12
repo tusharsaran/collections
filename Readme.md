@@ -128,6 +128,9 @@
                           Collections.sort(arrayList, cmp);   -- will sort based on emp age.
               
               
+	
+	
+	
 	VECTOR:
 		- same like Array list only difference is it is synchronized or thread safe thats why is bit slow
 		- maintain insertion order
@@ -142,6 +145,7 @@
 	
 		IMPORTANT FUNCTIONS OF VECTOR 
 			same what arraylist has..
+
 
 
 <br> <br>
@@ -185,6 +189,8 @@
 	
 	
 	
+	
+	
 	LINKEDHASHSET
 	
 	  - `no duplicate elements`
@@ -212,6 +218,10 @@
 		- clear()
 		- isEmpty()
 		- toArray()
+	
+	
+	
+	
 	
 	
 	TREESET
@@ -243,10 +253,98 @@
 		- isEmpty()
 		- toArray()
 	
-	- one of the class of set only implements the order of insertion.
+	
+	
+<br> <br>
+<h3>MAP</h3>
+
+	- contains key value pair
+	- key does not contain duplicate element
+	- values can have duplicate elements
+	
+	
+	HASHMAP
+		- key/value pair, denoted as HashMap<Key, Value> or HashMap<K, V>
+		- maintains no order, no guarantees concerning the order of iteration
+		- not syncronized
+		- allow null values both for key and value
+		- not sorted both key and values
+		- keys does not allow duplicate elements, values can be duplicate
+		- similar to the Hashtable class except that it is unsynchronized and permits nulls(null values and null key).
+	
+	
+	 IMPORTANT FUNCTIONS IN HASHMAP
+		
+		- boolean containsKey(Key k)
+		- boolean containsValue(Value v)
+		- boolean isEmpty()
+		- Set<E> keySet()
+		- Collections<E> values()
+		- value remove(Key,value)
+		- value remove(Key k)
+		- int size()
+		- void clear()
+		- E replace(key, new value) - return the value of previous key or null if its first
+		- E put(key, value) - return the value of previous key or null if its first
+		- void puAll(Map)
+		
+	traversing Map: 
+	  1. 	
+		- use Map.Entry
+		- entrySet
+		- getKey()
+		- get Value()
+		
+		//Iteration 1
+		for(Map.Entry<Long, String> mp : employee.entrySet()) {
+			System.out.printf("Key : %d \n",  mp.getKey());
+			System.out.printf("Value  : %s \n",  mp.getValue());
+			
+		}
+
+
+	   2. 
+		- convert to Set (of Entry)
+		- use Map.Entry
+		- entrySet
+		- getKey()
+		- get Value()
+		- Iterator
+		
+		//Iteration 2
+		Set<Entry<Long, String>> set =  employee.entrySet();
+		Iterator<Entry<Long, String>> itr  = set.iterator();
+		while(itr.hasNext()) {
+			Map.Entry<Long, String> mp1 = (Map.Entry<Long, String>) itr.next();
+			System.out.printf("Key : %d \n", mp1.getKey())  ;
+			System.out.printf("Value  : %s \n",  mp1.getValue());
+		}
+		
+	    3. using keySet())
+		
+		//Iteration 3 getting keys 
+		for(Long empid :  employee.keySet()) {
+			System.out.printf("Key : %d \n", empid)  ;
+		}
+		
+	    4. using values()
+
+		//Iteration 3 getting values 
+		for(String name :  employee.values()) {
+			System.out.printf("Values : %s \n", name)  ;
+		}
 	
 	
 	
+	TREEMAP
+	
+	
+	LINKEDHASHMAP
+		- maintaint the insertion order 
+
+
+
+
 
 <br> <br>
 <h2> Comparable vs Comparator </h2>
