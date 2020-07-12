@@ -169,6 +169,8 @@
  	  - iterator returned by this class is fail-fast which means iterator would throw
 	    ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means 
 	    except iterator’s own remove method.
+	  - for sorting hashet you either need to convert in list, use comparator (if applicable) and call 
+	    Collections.sort() or convert into tree set.
 	
 	
 	 HOW HASHSET WORKS INTERNALLY
@@ -201,7 +203,8 @@
  	  - iterator returned by this class is fail-fast which means iterator would throw
 	    ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means 
 	    except iterator’s own remove method.
-	
+	 - for sorting linkedhashet you either need to convert in list, use comparator (if applicable) and call 
+	    Collections.sort() or convert into tree set.
 	
 	 HOW LINKEDHASHSET WORKS INTERNALLY
 	 	- stores all the elements in hash table.
@@ -287,6 +290,28 @@
 		- E replace(key, new value) - return the value of previous key or null if its first
 		- E put(key, value) - return the value of previous key or null if its first
 		- void puAll(Map)
+		- Collections.synchronizedMap(hmap)
+		- Sorting Hashmap
+			- Keys using Treemap
+			- Values using Comparator
+
+					List<String>  list = new LinkedList(employee.entrySet());
+
+					Comparator<String> valueComp =  new Comparator() {
+
+						@Override
+						public int compare(Object o1, Object o2) {
+						return ((Comparable)(((Map.Entry) o1).
+							getValue())).compareTo((((Map.Entry) o2).
+							getValue()));
+						}
+					};
+
+					Collections.sort(list, valueComp);
+					
+					
+					
+					
 		
 	traversing Map: 
 	  1. 	
