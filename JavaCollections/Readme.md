@@ -1,5 +1,3 @@
-<b>Note:</b> Click Readme.md for better reading
-
 <h2>Collections : </h2>
           
       In simple terms if we are talking in terms of numbers or group we need something to store. let say 
